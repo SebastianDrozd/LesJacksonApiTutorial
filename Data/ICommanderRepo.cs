@@ -6,10 +6,11 @@ using LesJacksonApiTutorial.Models;
 
 namespace LesJacksonApiTutorial.Data
 {
-    interface ICommanderRepo
+    public interface ICommanderRepo
     {
-        public Command getCommand(int id);
+   
+        public IEnumerable<Command> GetCommands();
 
-        public List<Command> getCommands();
+        public Command GetCommandById(int id);
     }
-}
+    }
