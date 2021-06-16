@@ -22,7 +22,7 @@ namespace LesJacksonApiTutorial
         {
             Configuration = configuration;
         }
-
+        // hello
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -31,6 +31,7 @@ namespace LesJacksonApiTutorial
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer
             (Configuration.GetConnectionString("CommanderConnection")));
             services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
